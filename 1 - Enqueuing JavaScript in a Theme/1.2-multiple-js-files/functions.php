@@ -10,21 +10,21 @@ add_theme_support( 'automatic-feed-links' );
 // Load in our JS
 function jsforwp_enqueue_scripts() {
 
-  // Change 'unique-handle-here' to 'jsforwp-config-js'
+  // Change 'unique-handle-here' to 'config-js'
   // Change '/path/to/file.js' to '/assets/js/config.js'
    wp_enqueue_script(
-     'unique-handle-here',
-     get_stylesheet_directory_uri() . '/path/to/file.js',
+     'jsforwp-config-js',
+     get_stylesheet_directory_uri() . '/assets/js/config.js',
      [],
      time(),
      true
    );
 
-   // Change 'dependency-handle-here' to 'jsforwp-config-js'
+   // Change 'dependency-handle-here' to 'config-js'
     wp_enqueue_script(
       'jsforwp-theme-js',
       get_stylesheet_directory_uri() . '/assets/js/theme.js',
-      [ 'dependency-handle-here' ],
+      [ 'jsforwp-config-js' ],
       time(),
       true
     );
