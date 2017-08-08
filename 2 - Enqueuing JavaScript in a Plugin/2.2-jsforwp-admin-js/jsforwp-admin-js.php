@@ -24,7 +24,7 @@ function jsforwp_backend_scripts() {
 
 }
 // Change 'admin_js_hook_here' to 'admin_enqueue_scripts'
-add_action( 'admin_js_hook_here', 'jsforwp_backend_scripts' );
+add_action( 'admin_enqueue_scripts', 'jsforwp_backend_scripts' );
 
 
 function jsforwp_backend_styles() {

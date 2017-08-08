@@ -12,7 +12,7 @@
 defined( 'ABSPATH' ) or die( 'No direct access!' );
 
 // Set $main_menu_url equal to 'jsforwp-2-3'
-$main_menu_url = 'change_me';
+$main_menu_url = 'jsforwp-2-3';
 
 function jsforwp_admin_menu() {
   global $main_menu_url;
@@ -43,7 +43,7 @@ function jsforwp_backend_scripts( $hook ) {
   global $main_menu_url;
 
   // Change 'custom_url' to $main_menu_url
-  if( $hook != 'toplevel_page_' . 'custom_url' ) {
+  if( $hook != 'toplevel_page_' . '$main_menu_url' ) {
     return;
   }
 

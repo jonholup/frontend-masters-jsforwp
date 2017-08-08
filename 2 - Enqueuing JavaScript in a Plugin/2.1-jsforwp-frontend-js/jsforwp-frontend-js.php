@@ -19,7 +19,7 @@ function jsforwp_scripts() {
   // Pass __FILE__ as second parameter
   wp_enqueue_script(
     'jsforwp-main-js',
-    '/path/to/file.js',
+    plugins_url( '/assets/js/main.js', __FILE__ ),
     [],
     time(),
     true
